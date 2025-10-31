@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج - متجر الأثاث</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/product-details.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="../index.html" class="logo">🛋️ متجر الأثاث</a>
+            </div>
+            
+            <ul class="nav__menu">
+                <li><a href="../index.html" class="nav__link">الرئيسية</a></li>
+                <li><a href="products.html" class="nav__link">المنتجات</a></li>
+                <li><a href="categories.html" class="nav__link">التصنيفات</a></li>
+                <li><a href="about.html" class="nav__link">عن المتجر</a></li>
+            </ul>
+
+            <div class="nav__actions">
+                <button class="nav__search-btn" id="search-btn">🔍</button>
+                <a href="cart.html" class="nav__cart-btn">🛒 <span class="cart-count">0</span></a>
+                <a href="login.html" class="nav__auth-btn" id="auth-btn">تسجيل الدخول</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Product Details Section -->
+    <section class="product-details">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="../index.html">الرئيسية</a>
+                <span> / </span>
+                <a href="products.html">المنتجات</a>
+                <span> / </span>
+                <a href="#" id="category-breadcrumb">التصنيف</a>
+                <span> / </span>
+                <span class="current" id="product-breadcrumb">اسم المنتج</span>
+            </nav>
+
+            <div class="product-layout">
+                <!-- Product Images -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="" alt="" id="main-product-image">
+                        <div class="image-badges">
+                            <span class="badge new" id="new-badge">جديد</span>
+                            <span class="badge discount" id="discount-badge">خصم</span>
+                        </div>
+                    </div>
+                    <div class="image-thumbnails" id="image-thumbnails">
+                        <!-- Thumbnails will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <div class="product-header">
+                        <h1 class="product-title" id="product-title">اسم المنتج</h1>
+                        <div class="product-rating">
+                            <div class="stars" id="product-stars">
+                                ★★★★★
+                            </div>
+                            <span class="rating-text" id="rating-text">(0 تقييم)</span>
+                        </div>
+                    </div>
+
+                    <div class="product-pricing">
+                        <div class="current-price" id="current-price">0 ر.س</div>
+                        <div class="original-price" id="original-price">0 ر.س</div>
+                        <div class="discount-percent" id="discount-percent">0%</div>
+                    </div>
+
+                    <div class="product-description">
+                        <p id="product-description">وصف المنتج سيظهر هنا...</p>
+                    </div>
+
+                    <div class="product-features">
+                        <h4>المميزات:</h4>
+                        <ul class="features-list" id="features-list">
+                            <!-- Features will be loaded here -->
+                        </ul>
+                    </div>
+
+                    <!-- Product Options -->
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label for="color-select">اللون:</label>
+                            <div class="color-options" id="color-options">
+                                <!-- Color options will be loaded here -->
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <label for="quantity">الكمية:</label>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn" id="decrease-qty">-</button>
+                                <input type="number" id="quantity" value="1" min="1" max="10">
+                                <button class="quantity-btn" id="increase-qty">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Actions -->
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-add-to-cart" id="add-to-cart">
+                            🛒 أضف إلى السلة
+                        </button>
+                        <button class="btn btn-secondary btn-buy-now" id="buy-now">
+                            💳 شراء الآن
+                        </button>
+                        <button class="btn-wishlist" id="add-to-wishlist">
+                            ❤️
+                        </button>
+                    </div>
+
+                    <!-- Product Meta -->
+                    <div class="product-meta">
+                        <div class="meta-item">
+                            <span class="meta-icon">📦</span>
+                            <span>التوصيل مجاني للطلبات فوق 500 ر.س</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">🛡️</span>
+                            <span>ضمان لمدة سنتين</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">↩️</span>
+                            <span>إرجاع مجاني خلال 14 يوم</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="description">الوصف</button>
+                    <button class="tab-btn" data-tab="specifications">المواصفات</button>
+                    <button class="tab-btn" data-tab="reviews">التقييمات</button>
+                    <button class="tab-btn" data-tab="shipping">الشحن والتوصيل</button>
+                </div>
+
+                <div class="tabs-content">
+                    <!-- Description Tab -->
+                    <div class="tab-panel active" id="description">
+                        <h3>وصف المنتج</h3>
+                        <div id="full-description">
+                            <!-- Full description will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Specifications Tab -->
+                    <div class="tab-panel" id="specifications">
+                        <h3>المواصفات الفنية</h3>
+                        <div class="specs-table" id="specs-table">
+                            <!-- Specifications will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Reviews Tab -->
+                    <div class="tab-panel" id="reviews">
+                        <div class="reviews-header">
+                            <div class="reviews-summary">
+                                <div class="average-rating">
+                                    <span class="rating-score" id="average-rating">0.0</span>
+                                    <div class="stars">★★★★★</div>
+                                    <span class="reviews-count" id="reviews-count">0 تقييم</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" id="write-review">كتابة تقييم</button>
+                        </div>
+
+                        <div class="reviews-list" id="reviews-list">
+                            <!-- Reviews will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Shipping Tab -->
+                    <div class="tab-panel" id="shipping">
+                        <h3>معلومات الشحن والتوصيل</h3>
+                        <div class="shipping-info">
+                            <div class="shipping-item">
+                                <h4>🚚 التوصيل</h4>
+                                <p>• توصيل مجاني للطلبات فوق 500 ر.س</p>
+                                <p>• مدة التوصيل: 2-5 أيام عمل</p>
+                                <p>• التوصيل لجميع أنحاء المملكة</p>
+                            </div>
+                            <div class="shipping-item">
+                                <h4>↩️ الإرجاع والاستبدال</h4>
+                                <p>• إرجاع مجاني خلال 14 يوم من الاستلام</p>
+                                <p>• المنتج يجب أن يكون بحالته الأصلية</p>
+                                <p>• سيتم استرداد المبلغ خلال 5-7 أيام عمل</p>
+                            </div>
+                            <div class="shipping-item">
+                                <h4>🛡️ الضمان</h4>
+                                <p>• ضمان لمدة سنتين ضد عيوب الصنعة</p>
+                                <p>• خدمة ما بعد البيع متاحة 24/7</p>
+                                <p>• دعم فني مجاني للتركيب والصيانة</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="related-products">
+                <h2>منتجات ذات صلة</h2>
+                <div class="related-grid" id="related-products">
+                    <!-- Related products will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Modal -->
+    <div class="modal review-modal" id="review-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="review-close">✕</button>
+            <h3>كتابة تقييم</h3>
+            <form class="review-form" id="review-form">
+                <div class="form-group">
+                    <label>التقييم</label>
+                    <div class="rating-input">
+                        <span class="star" data-rating="1">☆</span>
+                        <span class="star" data-rating="2">☆</span>
+                        <span class="star" data-rating="3">☆</span>
+                        <span class="star" data-rating="4">☆</span>
+                        <span class="star" data-rating="5">☆</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="review-title">عنوان التقييم</label>
+                    <input type="text" id="review-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="review-text">نص التقييم</label>
+                    <textarea id="review-text" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">نشر التقييم</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">متجر الأثاث</h3>
+                    <p class="footer__description">نساعدك في توفير أفضل الأثاث لمنزلك بأعلى جودة وأفضل الأسعار</p>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">روابط سريعة</h4>
+                    <ul class="footer__links">
+                        <li><a href="../index.html">الرئيسية</a></li>
+                        <li><a href="products.html">المنتجات</a></li>
+                        <li><a href="categories.html">التصنيفات</a></li>
+                        <li><a href="about.html">عن المتجر</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">خدمة العملاء</h4>
+                    <ul class="footer__links">
+                        <li><a href="contact.html">الدعم الفني</a></li>
+                        <li><a href="shipping.html">الشحن والتوصيل</a></li>
+                        <li><a href="returns.html">الإرجاع والاستبدال</a></li>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 متجر الأثاث. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../js/config.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/product-details.js"></script>
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إتمام الطلب - متجر الأثاث</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="../index.html" class="logo">🛋️ متجر الأثاث</a>
+            </div>
+            
+            <div class="checkout-steps">
+                <div class="step active" data-step="1">
+                    <span class="step-number">1</span>
+                    <span class="step-text">المعلومات</span>
+                </div>
+                <div class="step" data-step="2">
+                    <span class="step-number">2</span>
+                    <span class="step-text">الشحن</span>
+                </div>
+                <div class="step" data-step="3">
+                    <span class="step-number">3</span>
+                    <span class="step-text">الدفع</span>
+                </div>
+                <div class="step" data-step="4">
+                    <span class="step-number">4</span>
+                    <span class="step-text">التأكيد</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">إتمام الطلب</h1>
+                <p class="page-subtitle">أكمل معلوماتك لإتمام عملية الشراء</p>
+            </div>
+
+            <div class="checkout-layout">
+                <!-- Checkout Form -->
+                <div class="checkout-main">
+                    <form class="checkout-form" id="checkout-form">
+                        <!-- Step 1: Personal Information -->
+                        <div class="checkout-step active" id="step-1">
+                            <div class="step-header">
+                                <h2>المعلومات الشخصية</h2>
+                                <p>أدخل معلوماتك الشخصية للتواصل</p>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="first-name" class="form-label">الاسم الأول *</label>
+                                    <input type="text" id="first-name" name="first_name" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name" class="form-label">اسم العائلة *</label>
+                                    <input type="text" id="last-name" name="last_name" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="form-label">البريد الإلكتروني *</label>
+                                    <input type="email" id="email" name="email" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">رقم الهاتف *</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-primary next-step" data-next="2">
+                                    التالي → معلومات الشحن
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Shipping Information -->
+                        <div class="checkout-step" id="step-2">
+                            <div class="step-header">
+                                <h2>معلومات الشحن</h2>
+                                <p>أدخل عنوان التوصيل</p>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group full-width">
+                                    <label for="address" class="form-label">العنوان *</label>
+                                    <input type="text" id="address" name="address" class="form-input" placeholder="ادخل العنوان التفصيلي" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city" class="form-label">المدينة *</label>
+                                    <select id="city" name="city" class="form-input" required>
+                                        <option value="">اختر المدينة</option>
+                                        <option value="riyadh">الرياض</option>
+                                        <option value="jeddah">جدة</option>
+                                        <option value="dammam">الدمام</option>
+                                        <option value="mecca">مكة المكرمة</option>
+                                        <option value="medina">المدينة المنورة</option>
+                                        <option value="khobar">الخبر</option>
+                                        <option value="tabuk">تبوك</option>
+                                        <option value="abha">أبها</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="district" class="form-label">الحي *</label>
+                                    <input type="text" id="district" name="district" class="form-input" placeholder="ادخل اسم الحي" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="postal-code" class="form-label">الرمز البريدي</label>
+                                    <input type="text" id="postal-code" name="postal_code" class="form-input" placeholder="12345">
+                                </div>
+                            </div>
+
+                            <div class="shipping-method">
+                                <h3>طريقة الشحن</h3>
+                                <div class="shipping-options">
+                                    <label class="shipping-option">
+                                        <input type="radio" name="shipping_method" value="standard" checked>
+                                        <span class="checkmark"></span>
+                                        <div class="shipping-info">
+                                            <span class="shipping-name">التوصيل العادي</span>
+                                            <span class="shipping-duration">3-5 أيام عمل</span>
+                                            <span class="shipping-price">مجاني</span>
+                                        </div>
+                                    </label>
+                                    <label class="shipping-option">
+                                        <input type="radio" name="shipping_method" value="express">
+                                        <span class="checkmark"></span>
+                                        <div class="shipping-info">
+                                            <span class="shipping-name">التوصيل السريع</span>
+                                            <span class="shipping-duration">1-2 أيام عمل</span>
+                                            <span class="shipping-price">50 ر.س</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-secondary prev-step" data-prev="1">
+                                    ← السابق
+                                </button>
+                                <button type="button" class="btn btn-primary next-step" data-next="3">
+                                    التالي → طريقة الدفع
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Payment Method -->
+                        <div class="checkout-step" id="step-3">
+                            <div class="step-header">
+                                <h2>طريقة الدفع</h2>
+                                <p>اختر طريقة الدفع المناسبة</p>
+                            </div>
+
+                            <div class="payment-methods">
+                                <label class="payment-method">
+                                    <input type="radio" name="payment_method" value="credit_card" checked>
+                                    <span class="checkmark"></span>
+                                    <div class="payment-info">
+                                        <span class="payment-name">💳 بطاقة ائتمان</span>
+                                        <span class="payment-desc">دفع آمن عبر البطاقة</span>
+                                    </div>
+                                </label>
+
+                                <label class="payment-method">
+                                    <input type="radio" name="payment_method" value="mada">
+                                    <span class="checkmark"></span>
+                                    <div class="payment-info">
+                                        <span class="payment-name">🏦 مدى</span>
+                                        <span class="payment-desc">الدفع عبر بطاقة مدى</span>
+                                    </div>
+                                </label>
+
+                                <label class="payment-method">
+                                    <input type="radio" name="payment_method" value="apple_pay">
+                                    <span class="checkmark"></span>
+                                    <div class="payment-info">
+                                        <span class="payment-name">📱 Apple Pay</span>
+                                        <span class="payment-desc">الدفع عبر Apple Pay</span>
+                                    </div>
+                                </label>
+
+                                <label class="payment-method">
+                                    <input type="radio" name="payment_method" value="cash">
+                                    <span class="checkmark"></span>
+                                    <div class="payment-info">
+                                        <span class="payment-name">💵 الدفع عند الاستلام</span>
+                                        <span class="payment-desc">الدفع نقداً عند الاستلام</span>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <!-- Credit Card Form -->
+                            <div class="credit-card-form" id="credit-card-form">
+                                <div class="form-grid">
+                                    <div class="form-group full-width">
+                                        <label for="card-number" class="form-label">رقم البطاقة *</label>
+                                        <input type="text" id="card-number" name="card_number" class="form-input" placeholder="1234 5678 9012 3456" maxlength="19">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="card-name" class="form-label">اسم حامل البطاقة *</label>
+                                        <input type="text" id="card-name" name="card_name" class="form-input" placeholder="ادخل الاسم كما هو مدون على البطاقة">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="expiry-date" class="form-label">تاريخ الانتهاء *</label>
+                                        <input type="text" id="expiry-date" name="expiry_date" class="form-input" placeholder="MM/YY" maxlength="5">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv" class="form-label">CVV *</label>
+                                        <input type="text" id="cvv" name="cvv" class="form-input" placeholder="123" maxlength="3">
+                                    </div>
+                                </div>
+                                <div class="card-security">
+                                    <span class="security-badge">🔒 مدفوعات آمنة</span>
+                                    <span class="security-badge">🛡️ مشفر بـ SSL</span>
+                                </div>
+                            </div>
+
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-secondary prev-step" data-prev="2">
+                                    ← السابق
+                                </button>
+                                <button type="button" class="btn btn-primary next-step" data-next="4">
+                                    التالي → مراجعة الطلب
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Order Review -->
+                        <div class="checkout-step" id="step-4">
+                            <div class="step-header">
+                                <h2>مراجعة الطلب</h2>
+                                <p>راجع طلبك قبل التأكيد النهائي</p>
+                            </div>
+
+                            <div class="order-review">
+                                <!-- Order Items -->
+                                <div class="order-items">
+                                    <h3>المنتجات</h3>
+                                    <div class="items-list" id="review-items">
+                                        <!-- Order items will be loaded here -->
+                                    </div>
+                                </div>
+
+                                <!-- Order Summary -->
+                                <div class="order-summary">
+                                    <h3>ملخص الطلب</h3>
+                                    <div class="summary-details">
+                                        <div class="summary-row">
+                                            <span>طريقة الشحن:</span>
+                                            <span id="review-shipping">التوصيل العادي</span>
+                                        </div>
+                                        <div class="summary-row">
+                                            <span>طريقة الدفع:</span>
+                                            <span id="review-payment">بطاقة ائتمان</span>
+                                        </div>
+                                        <div class="summary-divider"></div>
+                                        <div class="summary-row">
+                                            <span>الإجمالي:</span>
+                                            <span id="review-total">0 ر.س</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Shipping Address -->
+                                <div class="shipping-address-review">
+                                    <h3>عنوان الشحن</h3>
+                                    <div class="address-details" id="review-address">
+                                        <!-- Address details will be loaded here -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="terms-agreement">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="agree-terms" required>
+                                    <span class="checkmark"></span>
+                                    أوافق على <a href="terms.html" target="_blank">الشروط والأحكام</a> 
+                                    و <a href="privacy.html" target="_blank">سياسة الخصوصية</a>
+                                </label>
+                            </div>
+
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-secondary prev-step" data-prev="3">
+                                    ← السابق
+                                </button>
+                                <button type="submit" class="btn btn-success" id="place-order">
+                                    ✅ تأكيد الطلب
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Order Summary Sidebar -->
+                <aside class="order-summary-sidebar">
+                    <div class="summary-card">
+                        <h3 class="summary-title">ملخص الطلب</h3>
+                        
+                        <div class="order-items-preview" id="sidebar-items">
+                            <!-- Order items preview will be loaded here -->
+                        </div>
+
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>الإجمالي:</span>
+                                <span id="sidebar-subtotal">0 ر.س</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>الشحن:</span>
+                                <span id="sidebar-shipping">0 ر.س</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>الضريبة:</span>
+                                <span id="sidebar-tax">0 ر.س</span>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-row total">
+                                <span>المجموع:</span>
+                                <span id="sidebar-total">0 ر.س</span>
+                            </div>
+                        </div>
+
+                        <!-- Security Badges -->
+                        <div class="security-badges">
+                            <div class="badge">
+                                <span>🔒</span>
+                                <span>شهادة SSL</span>
+                            </div>
+                            <div class="badge">
+                                <span>🛡️</span>
+                                <span>ضمان آمن</span>
+                            </div>
+                            <div class="badge">
+                                <span>💳</span>
+                                <span>دفع آمن</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Support Card -->
+                    <div class="support-card">
+                        <h4>📞 بحاجة إلى مساعدة؟</h4>
+                        <p>فريق الدعم متاح 24/7 لمساعدتك</p>
+                        <div class="support-contact">
+                            <span>📞 9200 12345</span>
+                            <span>✉️ support@furniture-store.com</span>
+                        </div>
+                    </div>
+
+                    <!-- Return Policy -->
+                    <div class="return-policy">
+                        <h4>↩️ سياسة الإرجاع</h4>
+                        <p>إرجاع مجاني خلال 14 يوم من الاستلام</p>
+                        <p>ضمان لمدة سنتين على جميع المنتجات</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal success-modal" id="success-modal">
+        <div class="modal-content">
+            <div class="success-content">
+                <div class="success-icon">✅</div>
+                <h2>تم تأكيد طلبك بنجاح!</h2>
+                <p class="order-number">رقم الطلب: <span id="order-number">#12345</span></p>
+                <p class="success-message">
+                    شكراً لثقتك بنا! تم استلام طلبك وسيتم تجهيزه في أقرب وقت ممكن.
+                </p>
+                <div class="success-details">
+                    <p>📧 سيصلك رسالة تأكيد على بريدك الإلكتروني مع تفاصيل التتبع.</p>
+                    <p>📦 مدة التوصيل المتوقعة: 3-5 أيام عمل</p>
+                </div>
+                <div class="success-actions">
+                    <a href="../index.html" class="btn btn-primary">العودة للرئيسية</a>
+                    <a href="products.html" class="btn btn-secondary">مواصلة التسوق</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">متجر الأثاث</h3>
+                    <p class="footer__description">نساعدك في توفير أفضل الأثاث لمنزلك بأعلى جودة وأفضل الأسعار</p>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">روابط سريعة</h4>
+                    <ul class="footer__links">
+                        <li><a href="../index.html">الرئيسية</a></li>
+                        <li><a href="products.html">المنتجات</a></li>
+                        <li><a href="categories.html">التصنيفات</a></li>
+                        <li><a href="about.html">عن المتجر</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">خدمة العملاء</h4>
+                    <ul class="footer__links">
+                        <li><a href="contact.html">الدعم الفني</a></li>
+                        <li><a href="shipping.html">الشحن والتوصيل</a></li>
+                        <li><a href="returns.html">الإرجاع والاستبدال</a></li>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 متجر الأثاث. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../js/config.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/checkout.js"></script>
+</body>
+</html>

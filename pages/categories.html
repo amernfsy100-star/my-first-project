@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التصنيفات - متجر الأثاث</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/categories.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="../index.html" class="logo">🛋️ متجر الأثاث</a>
+            </div>
+            
+            <ul class="nav__menu">
+                <li><a href="../index.html" class="nav__link">الرئيسية</a></li>
+                <li><a href="products.html" class="nav__link">المنتجات</a></li>
+                <li><a href="categories.html" class="nav__link active">التصنيفات</a></li>
+                <li><a href="about.html" class="nav__link">عن المتجر</a></li>
+            </ul>
+
+            <div class="nav__actions">
+                <button class="nav__search-btn" id="search-btn">🔍</button>
+                <a href="cart.html" class="nav__cart-btn">🛒 <span class="cart-count">0</span></a>
+                <a href="login.html" class="nav__auth-btn" id="auth-btn">تسجيل الدخول</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Categories Section -->
+    <section class="categories-page">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">تصنيفات المنتجات</h1>
+                <p class="page-subtitle">استكشف مجموعتنا المتنوعة من الأثاث المنزلي</p>
+            </div>
+
+            <!-- Categories Grid -->
+            <div class="categories-grid" id="categories-grid">
+                <!-- Categories will be loaded here by JavaScript -->
+            </div>
+
+            <!-- Category Details Section -->
+            <div class="category-details hidden" id="category-details">
+                <div class="category-header">
+                    <button class="back-to-categories" id="back-to-categories">← العودة للتصنيفات</button>
+                    <h2 class="category-title" id="category-title">اسم التصنيف</h2>
+                    <p class="category-description" id="category-description">وصف التصنيف</p>
+                </div>
+
+                <div class="category-products">
+                    <h3>المنتجات الشائعة</h3>
+                    <div class="products-mini-grid" id="category-products">
+                        <!-- Category products will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="categories-features">
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h4>توصيل سريع</h4>
+                    <p>توصيل لجميع أنحاء المملكة خلال 2-5 أيام</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h4>ضمان الجودة</h4>
+                    <p>ضمان لمدة سنتين على جميع أنواع الأثاث</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h4>تصميمات متنوعة</h4>
+                    <p>أحدث التصميمات العصرية والكلاسيكية</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💳</div>
+                    <h4>دفع آمن</h4>
+                    <p>أنظمة دفع متعددة وآمنة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">متجر الأثاث</h3>
+                    <p class="footer__description">نساعدك في توفير أفضل الأثاث لمنزلك بأعلى جودة وأفضل الأسعار</p>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">روابط سريعة</h4>
+                    <ul class="footer__links">
+                        <li><a href="../index.html">الرئيسية</a></li>
+                        <li><a href="products.html">المنتجات</a></li>
+                        <li><a href="categories.html">التصنيفات</a></li>
+                        <li><a href="about.html">عن المتجر</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">خدمة العملاء</h4>
+                    <ul class="footer__links">
+                        <li><a href="contact.html">الدعم الفني</a></li>
+                        <li><a href="shipping.html">الشحن والتوصيل</a></li>
+                        <li><a href="returns.html">الإرجاع والاستبدال</a></li>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 متجر الأثاث. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../js/config.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/categories.js"></script>
+</body>
+</html>

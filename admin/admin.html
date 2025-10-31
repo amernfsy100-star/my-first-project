@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - متجر الأثاث</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+</head>
+<body class="admin-body">
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="admin-nav">
+            <div class="admin-nav-left">
+                <button class="sidebar-toggle" id="sidebar-toggle">
+                    ☰
+                </button>
+                <a href="../index.html" class="admin-logo">
+                    🛋️ متجر الأثاث - الإدارة
+                </a>
+            </div>
+            
+            <div class="admin-nav-right">
+                <div class="admin-search">
+                    <input type="text" placeholder="بحث في لوحة التحكم..." class="search-input">
+                    <button class="search-btn">🔍</button>
+                </div>
+                
+                <div class="admin-user">
+                    <div class="user-avatar">
+                        <span>👨‍💼</span>
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">أحمد المشرف</span>
+                        <span class="user-role">مدير النظام</span>
+                    </div>
+                    <div class="user-dropdown">
+                        <button class="dropdown-btn">⌄</button>
+                        <div class="dropdown-menu">
+                            <a href="profile.html" class="dropdown-item">👤 الملف الشخصي</a>
+                            <a href="settings.html" class="dropdown-item">⚙️ الإعدادات</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="../index.html" class="dropdown-item">🏠 العودة للمتجر</a>
+                            <a href="../pages/login.html" class="dropdown-item logout">🚪 تسجيل الخروج</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="admin-notifications">
+                    <button class="notification-btn">🔔
+                        <span class="notification-count">3</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Layout -->
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar" id="admin-sidebar">
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h3 class="nav-section-title">الرئيسية</h3>
+                    <ul class="nav-links">
+                        <li>
+                            <a href="dashboard.html" class="nav-link">
+                                <span class="nav-icon">📊</span>
+                                <span class="nav-text">لوحة التحكم</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h3 class="nav-section-title">إدارة المحتوى</h3>
+                    <ul class="nav-links">
+                        <li>
+                            <a href="products-mgmt.html" class="nav-link active">
+                                <span class="nav-icon">🛍️</span>
+                                <span class="nav-text">المنتجات</span>
+                                <span class="nav-badge">24</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="categories-mgmt.html" class="nav-link">
+                                <span class="nav-icon">📁</span>
+                                <span class="nav-text">التصنيفات</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="brands.html" class="nav-link">
+                                <span class="nav-icon">🏷️</span>
+                                <span class="nav-text">العلامات التجارية</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h3 class="nav-section-title">المبيعات</h3>
+                    <ul class="nav-links">
+                        <li>
+                            <a href="orders.html" class="nav-link">
+                                <span class="nav-icon">📦</span>
+                                <span class="nav-text">الطلبات</span>
+                                <span class="nav-badge">12</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="customers.html" class="nav-link">
+                                <span class="nav-icon">👥</span>
+                                <span class="nav-text">العملاء</span>
+                                <span class="nav-badge">156</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="coupons.html" class="nav-link">
+                                <span class="nav-icon">🎫</span>
+                                <span class="nav-text">كوبونات الخصم</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h3 class="nav-section-title">التقارير</h3>
+                    <ul class="nav-links">
+                        <li>
+                            <a href="reports.html" class="nav-link">
+                                <span class="nav-icon">📈</span>
+                                <span class="nav-text">التقارير</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="analytics.html" class="nav-link">
+                                <span class="nav-icon">📊</span>
+                                <span class="nav-text">التحليلات</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h3 class="nav-section-title">الإعدادات</h3>
+                    <ul class="nav-links">
+                        <li>
+                            <a href="settings.html" class="nav-link">
+                                <span class="nav-icon">⚙️</span>
+                                <span class="nav-text">الإعدادات العامة</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="users.html" class="nav-link">
+                                <span class="nav-icon">👨‍💼</span>
+                                <span class="nav-text">المستخدمين</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="system-info">
+                    <div class="info-item">
+                        <span>💾 الذاكرة: 65%</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span>🔄 تحديث تلقائي</span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Page Header -->
+            <div class="admin-page-header">
+                <div class="page-header-left">
+                    <h1 class="page-title">لوحة التحكم</h1>
+                    <p class="page-subtitle">نظرة عامة على أداء المتجر</p>
+                </div>
+                <div class="page-header-right">
+                    <div class="header-actions">
+                        <button class="btn btn-primary">
+                            <span>➕</span>
+                            إضافة منتج جديد
+                        </button>
+                        <button class="btn btn-secondary">
+                            <span>📥</span>
+                            تصدير تقرير
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon revenue">💰</div>
+                    <div class="stat-info">
+                        <h3 class="stat-value">45,320 ر.س</h3>
+                        <p class="stat-label">إجمالي المبيعات</p>
+                        <div class="stat-trend positive">
+                            <span>↗️ +12%</span>
+                            <span>من الشهر الماضي</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon orders">📦</div>
+                    <div class="stat-info">
+                        <h3 class="stat-value">156</h3>
+                        <p class="stat-label">الطلبات الجديدة</p>
+                        <div class="stat-trend positive">
+                            <span>↗️ +8%</span>
+                            <span>من الأسبوع الماضي</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon customers">👥</div>
+                    <div class="stat-info">
+                        <h3 class="stat-value">2,458</h3>
+                        <p class="stat-label">عملاء نشطين</p>
+                        <div class="stat-trend positive">
+                            <span>↗️ +5%</span>
+                            <span>من الشهر الماضي</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon products">🛍️</div>
+                    <div class="stat-info">
+                        <h3 class="stat-value">1,247</h3>
+                        <p class="stat-label">منتج في المخزون</p>
+                        <div class="stat-trend negative">
+                            <span>↘️ -3%</span>
+                            <span>منتجات منخفضة المخزون</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="charts-row">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>مبيعات الشهر</h3>
+                        <select class="chart-filter">
+                            <option>آخر 7 أيام</option>
+                            <option>آخر 30 يوم</option>
+                            <option selected>آخر 90 يوم</option>
+                        </select>
+                    </div>
+                    <div class="chart-placeholder">
+                        <div class="chart-dummy">
+                            <div class="chart-bars">
+                                <div class="bar" style="height: 60%"></div>
+                                <div class="bar" style="height: 80%"></div>
+                                <div class="bar" style="height: 45%"></div>
+                                <div class="bar" style="height: 90%"></div>
+                                <div class="bar" style="height: 70%"></div>
+                                <div class="bar" style="height: 85%"></div>
+                                <div class="bar" style="height: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>أفضل المنتجات مبيعاً</h3>
+                        <select class="chart-filter">
+                            <option>هذا الأسبوع</option>
+                            <option selected>هذا الشهر</option>
+                            <option>هذا العام</option>
+                        </select>
+                    </div>
+                    <div class="top-products">
+                        <div class="product-item">
+                            <div class="product-info">
+                                <div class="product-image">🛋️</div>
+                                <div class="product-details">
+                                    <h4>كنب فاخر 3 مقاعد</h4>
+                                    <span>45 عملية بيع</span>
+                                </div>
+                            </div>
+                            <div class="product-sales">12,500 ر.س</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-info">
+                                <div class="product-image">🛏️</div>
+                                <div class="product-details">
+                                    <h4>سرير مودرن بمخزن</h4>
+                                    <span>32 عملية بيع</span>
+                                </div>
+                            </div>
+                            <div class="product-sales">9,800 ر.س</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-info">
+                                <div class="product-image">🍽️</div>
+                                <div class="product-details">
+                                    <h4>طاولة طعام خشبية</h4>
+                                    <span>28 عملية بيع</span>
+                                </div>
+                            </div>
+                            <div class="product-sales">7,200 ر.س</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="activity-section">
+                <div class="section-header">
+                    <h2>النشاط الحديث</h2>
+                    <a href="activity.html" class="view-all">عرض الكل</a>
+                </div>
+                
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">🛒</div>
+                        <div class="activity-content">
+                            <p><strong>محمد أحمد</strong> قام بشراء كنب فاخر</p>
+                            <span class="activity-time">منذ 5 دقائق</span>
+                        </div>
+                        <div class="activity-amount">2,500 ر.س</div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">📦</div>
+                        <div class="activity-content">
+                            <p>تم شحن الطلب #12345 إلى <strong>جدة</strong></p>
+                            <span class="activity-time">منذ ساعة</span>
+                        </div>
+                        <div class="activity-status shipped">تم الشحن</div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">👤</div>
+                        <div class="activity-content">
+                            <p><strong>سارة محمد</strong> سجلت حساب جديد</p>
+                            <span class="activity-time">منذ 3 ساعات</span>
+                        </div>
+                        <div class="activity-status new">جديد</div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">⭐</div>
+                        <div class="activity-content">
+                            <p>تقييم جديد على <strong>طاولة الطعام</strong></p>
+                            <span class="activity-time">منذ 5 ساعات</span>
+                        </div>
+                        <div class="activity-rating">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <h2>إجراءات سريعة</h2>
+                <div class="actions-grid">
+                    <a href="products-mgmt.html?action=add" class="action-card">
+                        <div class="action-icon">➕</div>
+                        <h3>إضافة منتج</h3>
+                        <p>أضف منتج جديد إلى المتجر</p>
+                    </a>
+                    
+                    <a href="orders.html" class="action-card">
+                        <div class="action-icon">📦</div>
+                        <h3>إدارة الطلبات</h3>
+                        <p>عرض ومعالجة الطلبات الجديدة</p>
+                    </a>
+                    
+                    <a href="customers.html" class="action-card">
+                        <div class="action-icon">👥</div>
+                        <h3>العملاء</h3>
+                        <p>إدارة حسابات العملاء</p>
+                    </a>
+                    
+                    <a href="reports.html" class="action-card">
+                        <div class="action-icon">📊</div>
+                        <h3>التقارير</h3>
+                        <p>عرض تقارير الأداء</p>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="../js/config.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - متجر الأثاث</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="../index.html" class="logo">🛋️ متجر الأثاث</a>
+            </div>
+            
+            <ul class="nav__menu">
+                <li><a href="../index.html" class="nav__link">الرئيسية</a></li>
+                <li><a href="products.html" class="nav__link">المنتجات</a></li>
+                <li><a href="categories.html" class="nav__link">التصنيفات</a></li>
+                <li><a href="about.html" class="nav__link">عن المتجر</a></li>
+                <li><a href="contact.html" class="nav__link active">اتصل بنا</a></li>
+            </ul>
+
+            <div class="nav__actions">
+                <button class="nav__search-btn" id="search-btn">🔍</button>
+                <a href="cart.html" class="nav__cart-btn">🛒 <span class="cart-count">0</span></a>
+                <a href="login.html" class="nav__auth-btn" id="auth-btn">تسجيل الدخول</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1 class="contact-title">اتصل بنا</h1>
+                <p class="contact-subtitle">نحن هنا لمساعدتك! تواصل معنا بأي استفسار</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods Section -->
+    <section class="contact-methods">
+        <div class="container">
+            <div class="methods-grid">
+                <div class="method-card">
+                    <div class="method-icon">📞</div>
+                    <h3>اتصل بنا</h3>
+                    <p>خدمة العملاء متاحة 24/7</p>
+                    <div class="contact-info">
+                        <span>9200 12345</span>
+                        <span>+966 50 000 0000</span>
+                    </div>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">✉️</div>
+                    <h3>البريد الإلكتروني</h3>
+                    <p>رد سريع خلال ساعات العمل</p>
+                    <div class="contact-info">
+                        <span>info@furniture-store.com</span>
+                        <span>support@furniture-store.com</span>
+                    </div>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">💬</div>
+                    <h3>الدردشة المباشرة</h3>
+                    <p>دردش معنا مباشرة</p>
+                    <div class="contact-info">
+                        <span>متاحة 8 صباحاً - 12 مساءً</span>
+                        <button class="btn btn-primary">ابدأ المحادثة</button>
+                    </div>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">🏪</div>
+                    <h3>زيارة المعرض</h3>
+                    <p>تفضل بزيارتنا في المعرض</p>
+                    <div class="contact-info">
+                        <span>الرياض، حي العليا</span>
+                        <span>9 صباحاً - 10 مساءً</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-layout">
+                <div class="contact-form-container">
+                    <h2>أرسل رسالة</h2>
+                    <p>سنرد عليك في أقرب وقت ممكن</p>
+                    
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="contact-name" class="form-label">الاسم الكامل *</label>
+                                <input type="text" id="contact-name" name="name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email" class="form-label">البريد الإلكتروني *</label>
+                                <input type="email" id="contact-email" name="email" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-phone" class="form-label">رقم الهاتف</label>
+                                <input type="tel" id="contact-phone" name="phone" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-subject" class="form-label">الموضوع *</label>
+                                <select id="contact-subject" name="subject" class="form-input" required>
+                                    <option value="">اختر الموضوع</option>
+                                    <option value="general">استفسار عام</option>
+                                    <option value="product">استفسار عن منتج</option>
+                                    <option value="order">متابعة طلب</option>
+                                    <option value="return">إرجاع أو استبدال</option>
+                                    <option value="complaint">شكوى</option>
+                                    <option value="suggestion">مقترح</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="contact-message" class="form-label">الرسالة *</label>
+                                <textarea id="contact-message" name="message" class="form-input" rows="6" placeholder="اكتب رسالتك هنا..." required></textarea>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-send">
+                            📤 إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-info-sidebar">
+                    <div class="info-card">
+                        <h3>معلومات التواصل</h3>
+                        <div class="contact-details">
+                            <div class="detail-item">
+                                <span class="detail-icon">📞</span>
+                                <div class="detail-content">
+                                    <strong>الهاتف</strong>
+                                    <span>9200 12345</span>
+                                    <span>+966 50 000 0000</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">✉️</span>
+                                <div class="detail-content">
+                                    <strong>البريد الإلكتروني</strong>
+                                    <span>info@furniture-store.com</span>
+                                    <span>support@furniture-store.com</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">🏪</span>
+                                <div class="detail-content">
+                                    <strong>العنوان</strong>
+                                    <span>الرياض، حي العليا</span>
+                                    <span>شارع الملك فهد</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">🕒</span>
+                                <div class="detail-content">
+                                    <strong>ساعات العمل</strong>
+                                    <span>السبت - الخميس: 9 ص - 10 م</span>
+                                    <span>الجمعة: 4 م - 10 م</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-preview">
+                        <h3>أسئلة سريعة</h3>
+                        <div class="quick-questions">
+                            <a href="#shipping" class="quick-link">معلومات الشحن والتوصيل</a>
+                            <a href="#returns" class="quick-link">سياسة الإرجاع والاستبدال</a>
+                            <a href="#warranty" class="quick-link">الضمان وخدمة ما بعد البيع</a>
+                            <a href="#tracking" class="quick-link">تتبع الطلب</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branches Section -->
+    <section class="branches-section">
+        <div class="container">
+            <h2 class="section-title">فروعنا</h2>
+            <div class="branches-grid">
+                <div class="branch-card">
+                    <h3>🏪 فرع الرياض</h3>
+                    <div class="branch-info">
+                        <p>📍 الحي: العليا</p>
+                        <p>📞 الهاتف: 011 123 4567</p>
+                        <p>🕒 الساعات: 9 ص - 10 م</p>
+                    </div>
+                </div>
+                <div class="branch-card">
+                    <h3>🏪 فرع جدة</h3>
+                    <div class="branch-info">
+                        <p>📍 الحي: السلامة</p>
+                        <p>📞 الهاتف: 012 123 4567</p>
+                        <p>🕒 الساعات: 9 ص - 10 م</p>
+                    </div>
+                </div>
+                <div class="branch-card">
+                    <h3>🏪 فرع الدمام</h3>
+                    <div class="branch-info">
+                        <p>📍 الحي: النخيل</p>
+                        <p>📞 الهاتف: 013 123 4567</p>
+                        <p>🕒 الساعات: 9 ص - 10 م</p>
+                    </div>
+                </div>
+                <div class="branch-card">
+                    <h3>🏪 فرع مكة</h3>
+                    <div class="branch-info">
+                        <p>📍 الحي: العزيزية</p>
+                        <p>📞 الهاتف: 012 765 4321</p>
+                        <p>🕒 الساعات: 4 م - 12 م</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="contact-faq">
+        <div class="container">
+            <h2 class="section-title">أسئلة متكررة</h2>
+            <div class="faq-grid">
+                <div class="faq-category">
+                    <h3>🛒 معلومات الشراء</h3>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <h4>كيف أتم عملية الشراء؟</h4>
+                            <p>يمكنك التسوق من خلال موقعنا، إضافة المنتجات للسلة، ثم إتمام عملية الدفع.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>هل يمكنني تعديل الطلب بعد التأكيد؟</h4>
+                            <p>نعم، خلال ساعتين من تأكيد الطلب عبر خدمة العملاء.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-category">
+                    <h3>🚚 الشحن والتوصيل</h3>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <h4>ما هي مدة التوصيل؟</h4>
+                            <p>من 2-5 أيام عمل حسب المدينة والمنطقة.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>هل التوصيل مجاني؟</h4>
+                            <p>نعم، للطلبات فوق 500 ريال سعودي.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-category">
+                    <h3>↩️ الإرجاع والاستبدال</h3>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <h4>ما هي سياسة الإرجاع؟</h4>
+                            <p>يمكنك إرجاع المنتج خلال 14 يوم مع الحفاظ على حالته الأصلية.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>كم تستغرق عملية الاسترداد؟</h4>
+                            <p>من 5-7 أيام عمل بعد استلام المنتج.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">متجر الأثاث</h3>
+                    <p class="footer__description">نساعدك في توفير أفضل الأثاث لمنزلك بأعلى جودة وأفضل الأسعار</p>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">روابط سريعة</h4>
+                    <ul class="footer__links">
+                        <li><a href="../index.html">الرئيسية</a></li>
+                        <li><a href="products.html">المنتجات</a></li>
+                        <li><a href="categories.html">التصنيفات</a></li>
+                        <li><a href="about.html">عن المتجر</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">خدمة العملاء</h4>
+                    <ul class="footer__links">
+                        <li><a href="contact.html">الدعم الفني</a></li>
+                        <li><a href="shipping.html">الشحن والتوصيل</a></li>
+                        <li><a href="returns.html">الإرجاع والاستبدال</a></li>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 متجر الأثاث. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal success-modal" id="contact-success-modal">
+        <div class="modal-content">
+            <div class="success-content">
+                <div class="success-icon">✅</div>
+                <h3>تم إرسال رسالتك بنجاح!</h3>
+                <p>شكراً لتواصلك معنا. سنرد عليك في أقرب وقت ممكن.</p>
+                <button class="btn btn-primary" id="close-success-modal">حسناً</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="../js/config.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

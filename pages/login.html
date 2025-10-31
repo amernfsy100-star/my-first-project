@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - متجر الأثاث</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="../index.html" class="logo">🛋️ متجر الأثاث</a>
+            </div>
+            
+            <div class="nav__actions">
+                <a href="register.html" class="nav__auth-btn">إنشاء حساب</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Login Section -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h1 class="auth-title">تسجيل الدخول</h1>
+                    <p class="auth-subtitle">مرحباً بعودتك! سجل دخولك للمتابعة</p>
+                </div>
+
+                <form class="auth-form" id="login-form">
+                    <div class="form-group">
+                        <label for="email" class="form-label">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="ادخل بريدك الإلكتروني" required>
+                        <span class="form-error" id="email-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">كلمة المرور</label>
+                        <input type="password" id="password" name="password" class="form-input" placeholder="ادخل كلمة المرور" required>
+                        <span class="form-error" id="password-error"></span>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="remember-me">
+                            <span class="checkmark"></span>
+                            تذكرني
+                        </label>
+                        <a href="forgot-password.html" class="forgot-link">نسيت كلمة المرور؟</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-auth">تسجيل الدخول</button>
+                </form>
+
+                <div class="auth-divider">
+                    <span>أو</span>
+                </div>
+
+                <div class="social-auth">
+                    <button class="btn btn-social btn-google">
+                        <span class="social-icon">🔍</span>
+                        متابعة بحساب Google
+                    </button>
+                    <button class="btn btn-social btn-facebook">
+                        <span class="social-icon">📘</span>
+                        متابعة بحساب Facebook
+                    </button>
+                </div>
+
+                <div class="auth-footer">
+                    <p>ليس لديك حساب؟ <a href="register.html" class="auth-link">أنشئ حساب جديد</a></p>
+                </div>
+            </div>
+
+            <div class="auth-welcome">
+                <div class="welcome-content">
+                    <h2>مرحباً بعودتك!</h2>
+                    <p>سجل دخولك للاستفادة من المزايا الحصرية:</p>
+                    <ul class="features-list">
+                        <li>💼 تتبع طلباتك</li>
+                        <li>❤️ قائمة المفضلة</li>
+                        <li>🎯 عروض حصرية</li>
+                        <li>🚚 شحن سريع</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript Files -->
+    <script src="../js/config.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

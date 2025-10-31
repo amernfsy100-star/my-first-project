@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإحصائيات - متجر الأثاث</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+</head>
+<body class="admin-body">
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="admin-nav">
+            <div class="admin-nav-left">
+                <button class="sidebar-toggle" id="sidebar-toggle">
+                    ☰
+                </button>
+                <a href="../index.html" class="admin-logo">
+                    🛋️ متجر الأثاث - الإدارة
+                </a>
+            </div>
+            
+            <div class="admin-nav-right">
+                <div class="admin-search">
+                    <input type="text" placeholder="بحث في لوحة التحكم..." class="search-input">
+                    <button class="search-btn">🔍</button>
+                </div>
+                
+                <div class="admin-user">
+                    <div class="user-avatar">
+                        <span>👨‍💼</span>
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">أحمد المشرف</span>
+                        <span class="user-role">مدير النظام</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Layout -->
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar" id="admin-sidebar">
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h3 class="nav-section-title">الرئيسية</h3>
+                    <ul class="nav-links">
+                        <li>
+                            <a href="dashboard.html" class="nav-link active">
+                                <span class="nav-icon">📊</span>
+                                <span class="nav-text">لوحة التحكم</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- نفس قائمة التنقل كما في admin.html -->
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Page Header -->
+            <div class="admin-page-header">
+                <div class="page-header-left">
+                    <h1 class="page-title">الإحصائيات والتقارير</h1>
+                    <p class="page-subtitle">تحليلات شاملة لأداء المتجر</p>
+                </div>
+                <div class="page-header-right">
+                    <div class="date-filter">
+                        <select class="filter-select">
+                            <option>آخر 7 أيام</option>
+                            <option>آخر 30 يوم</option>
+                            <option selected>آخر 90 يوم</option>
+                            <option>هذا العام</option>
+                            <option>مخصص</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Stats -->
+            <div class="detailed-stats">
+                <div class="stat-row">
+                    <div class="stat-item">
+                        <div class="stat-value">1.2M ر.س</div>
+                        <div class="stat-label">إجمالي الإيرادات</div>
+                        <div class="stat-change positive">+15%</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">45,320 ر.س</div>
+                        <div class="stat-label">متوسط الطلب</div>
+                        <div class="stat-change positive">+8%</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">3.2%</div>
+                        <div class="stat-label">معدل التحويل</div>
+                        <div class="stat-change positive">+0.5%</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">2.8</div>
+                        <div class="stat-label">عناصر/طلب</div>
+                        <div class="stat-change neutral">0%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Charts -->
+            <div class="main-charts">
+                <div class="chart-container large">
+                    <div class="chart-header">
+                        <h3>أداء المبيعات</h3>
+                        <div class="chart-legend">
+                            <span class="legend-item">
+                                <span class="legend-color revenue"></span>
+                                الإيرادات
+                            </span>
+                            <span class="legend-item">
+                                <span class="legend-color orders"></span>
+                                الطلبات
+                            </span>
+                        </div>
+                    </div>
+                    <div class="chart-placeholder">
+                        <div class="chart-dummy-complex">
+                            <!-- رسم بياني محاكى -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3>مصادر الزيارات</h3>
+                    </div>
+                    <div class="traffic-sources">
+                        <div class="source-item">
+                            <span class="source-name">محركات البحث</span>
+                            <div class="source-bar">
+                                <div class="bar-fill" style="width: 45%"></div>
+                            </div>
+                            <span class="source-percent">45%</span>
+                        </div>
+                        <div class="source-item">
+                            <span class="source-name">وسائل التواصل</span>
+                            <div class="source-bar">
+                                <div class="bar-fill" style="width: 30%"></div>
+                            </div>
+                            <span class="source-percent">30%</span>
+                        </div>
+                        <div class="source-item">
+                            <span class="source-name">الإحالات</span>
+                            <div class="source-bar">
+                                <div class="bar-fill" style="width: 15%"></div>
+                            </div>
+                            <span class="source-percent">15%</span>
+                        </div>
+                        <div class="source-item">
+                            <span class="source-name">مباشر</span>
+                            <div class="source-bar">
+                                <div class="bar-fill" style="width: 10%"></div>
+                            </div>
+                            <span class="source-percent">10%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Metrics -->
+            <div class="performance-metrics">
+                <h2>مقاييس الأداء</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h3>📱 تجربة الجوال</h3>
+                        <div class="metric-value">92%</div>
+                        <div class="metric-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="metric-change positive">+2%</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3>⚡ سرعة التحميل</h3>
+                        <div class="metric-value">1.8s</div>
+                        <div class="metric-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="metric-change positive">-0.3s</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3>🛒 معدل التخلي</h3>
+                        <div class="metric-value">68%</div>
+                        <div class="metric-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 68%"></div>
+                            </div>
+                        </div>
+                        <div class="metric-change negative">+3%</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3>⭐ تقييم العملاء</h3>
+                        <div class="metric-value">4.7/5</div>
+                        <div class="metric-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 94%"></div>
+                            </div>
+                        </div>
+                        <div class="metric-change positive">+0.2</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="../js/config.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

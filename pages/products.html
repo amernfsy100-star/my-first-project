@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنتجات - متجر الأثاث</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/products.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="../index.html" class="logo">🛋️ متجر الأثاث</a>
+            </div>
+            
+            <ul class="nav__menu">
+                <li><a href="../index.html" class="nav__link">الرئيسية</a></li>
+                <li><a href="products.html" class="nav__link active">المنتجات</a></li>
+                <li><a href="categories.html" class="nav__link">التصنيفات</a></li>
+                <li><a href="about.html" class="nav__link">عن المتجر</a></li>
+            </ul>
+
+            <div class="nav__actions">
+                <button class="nav__search-btn" id="search-btn">🔍</button>
+                <a href="cart.html" class="nav__cart-btn">🛒 <span class="cart-count">0</span></a>
+                <a href="login.html" class="nav__auth-btn" id="auth-btn">تسجيل الدخول</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-container">
+            <input type="text" placeholder="ابحث عن منتج..." class="search-input" id="global-search">
+            <button class="search-close" id="search-close">✕</button>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">جميع المنتجات</h1>
+                <p class="page-subtitle">اكتشف مجموعتنا الكاملة من الأثاث المنزلي</p>
+            </div>
+
+            <!-- Products Toolbar -->
+            <div class="products-toolbar">
+                <div class="toolbar-left">
+                    <div class="filter-toggle" id="filter-toggle">
+                        <span>☰ الفلاتر</span>
+                    </div>
+                    <div class="results-count">
+                        عرض <span id="results-count">0</span> منتج
+                    </div>
+                </div>
+                
+                <div class="toolbar-right">
+                    <div class="sort-select">
+                        <label for="sort-by">ترتيب حسب:</label>
+                        <select id="sort-by" class="sort-select">
+                            <option value="default">الإفتراضي</option>
+                            <option value="price-low">السعر: من الأقل للأعلى</option>
+                            <option value="price-high">السعر: من الأعلى للأقل</option>
+                            <option value="name">الإسم من أ-ي</option>
+                            <option value="newest">الأحدث أولاً</option>
+                            <option value="popular">الأكثر شيوعاً</option>
+                        </select>
+                    </div>
+                    
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid">◼️</button>
+                        <button class="view-btn" data-view="list">☰</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar" id="filters-sidebar">
+                    <div class="filters-header">
+                        <h3>الفلاتر</h3>
+                        <button class="filters-close" id="filters-close">✕</button>
+                    </div>
+
+                    <!-- Categories Filter -->
+                    <div class="filter-group">
+                        <h4 class="filter-title">التصنيفات</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="sofas">
+                                <span class="checkmark"></span>
+                                الكنب
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="curtains">
+                                <span class="checkmark"></span>
+                                الستائر
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="tables">
+                                <span class="checkmark"></span>
+                                الطاولات
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="beds">
+                                <span class="checkmark"></span>
+                                الأسرّة
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Price Filter -->
+                    <div class="filter-group">
+                        <h4 class="filter-title">السعر</h4>
+                        <div class="price-range">
+                            <div class="price-inputs">
+                                <input type="number" id="min-price" placeholder="أقل سعر" min="0">
+                                <span>إلى</span>
+                                <input type="number" id="max-price" placeholder="أعلى سعر" min="0">
+                            </div>
+                            <div class="price-slider">
+                                <input type="range" id="price-range" min="0" max="10000" step="100">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Features Filter -->
+                    <div class="filter-group">
+                        <h4 class="filter-title">المميزات</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="feature" value="free-shipping">
+                                <span class="checkmark"></span>
+                                توصيل مجاني
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="feature" value="discount">
+                                <span class="checkmark"></span>
+                                خصم
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="feature" value="new">
+                                <span class="checkmark"></span>
+                                جديد
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="feature" value="bestseller">
+                                <span class="checkmark"></span>
+                                الأكثر مبيعاً
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Rating Filter -->
+                    <div class="filter-group">
+                        <h4 class="filter-title">التقييم</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="radio" name="rating" value="5">
+                                <span class="checkmark"></span>
+                                <span class="stars">★★★★★</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="rating" value="4">
+                                <span class="checkmark"></span>
+                                <span class="stars">★★★★☆及以上</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="rating" value="3">
+                                <span class="checkmark"></span>
+                                <span class="stars">★★★☆☆及以上</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Filter Actions -->
+                    <div class="filter-actions">
+                        <button class="btn btn-primary" id="apply-filters">تطبيق الفلاتر</button>
+                        <button class="btn btn-secondary" id="reset-filters">إعادة تعيين</button>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <main class="products-main">
+                    <div class="products-container">
+                        <div class="products-grid" id="products-grid">
+                            <!-- Products will be loaded here by JavaScript -->
+                        </div>
+
+                        <!-- Loading State -->
+                        <div class="loading-state" id="loading-state">
+                            <div class="loading-spinner">⏳</div>
+                            <p>جاري تحميل المنتجات...</p>
+                        </div>
+
+                        <!-- Empty State -->
+                        <div class="empty-state hidden" id="empty-state">
+                            <div class="empty-icon">🔍</div>
+                            <h3>لا توجد منتجات</h3>
+                            <p>لم نعثر على أي منتج يتوافق مع بحثك</p>
+                            <button class="btn btn-primary" id="reset-search">إعادة تعيين البحث</button>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="pagination" id="pagination">
+                            <!-- Pagination will be generated by JavaScript -->
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick View Modal -->
+    <div class="modal quick-view-modal" id="quick-view-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="quick-view-close">✕</button>
+            <div class="quick-view-content" id="quick-view-content">
+                <!-- Quick view content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">متجر الأثاث</h3>
+                    <p class="footer__description">نساعدك في توفير أفضل الأثاث لمنزلك بأعلى جودة وأفضل الأسعار</p>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">روابط سريعة</h4>
+                    <ul class="footer__links">
+                        <li><a href="../index.html">الرئيسية</a></li>
+                        <li><a href="products.html">المنتجات</a></li>
+                        <li><a href="categories.html">التصنيفات</a></li>
+                        <li><a href="about.html">عن المتجر</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">خدمة العملاء</h4>
+                    <ul class="footer__links">
+                        <li><a href="contact.html">الدعم الفني</a></li>
+                        <li><a href="shipping.html">الشحن والتوصيل</a></li>
+                        <li><a href="returns.html">الإرجاع والاستبدال</a></li>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 متجر الأثاث. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../js/config.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/products.js"></script>
+</body>
+</html>

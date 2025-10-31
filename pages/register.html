@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب - متجر الأثاث</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="../index.html" class="logo">🛋️ متجر الأثاث</a>
+            </div>
+            
+            <div class="nav__actions">
+                <a href="login.html" class="nav__auth-btn">تسجيل الدخول</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Register Section -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h1 class="auth-title">إنشاء حساب جديد</h1>
+                    <p class="auth-subtitle">انضم إلينا وابدأ رحلة التسوق!</p>
+                </div>
+
+                <form class="auth-form" id="register-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name" class="form-label">الاسم الأول</label>
+                            <input type="text" id="first-name" name="first_name" class="form-input" placeholder="ادخل اسمك الأول" required>
+                            <span class="form-error" id="first-name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name" class="form-label">اسم العائلة</label>
+                            <input type="text" id="last-name" name="last_name" class="form-input" placeholder="ادخل اسم العائلة" required>
+                            <span class="form-error" id="last-name-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="ادخل بريدك الإلكتروني" required>
+                        <span class="form-error" id="email-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label">رقم الهاتف</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="ادخل رقم هاتفك" required>
+                        <span class="form-error" id="phone-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">كلمة المرور</label>
+                        <input type="password" id="password" name="password" class="form-input" placeholder="أنشئ كلمة مرور قوية" required>
+                        <div class="password-strength">
+                            <div class="strength-bar"></div>
+                            <span class="strength-text">قوة كلمة المرور</span>
+                        </div>
+                        <span class="form-error" id="password-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password" class="form-label">تأكيد كلمة المرور</label>
+                        <input type="password" id="confirm-password" name="confirm_password" class="form-input" placeholder="أعد إدخال كلمة المرور" required>
+                        <span class="form-error" id="confirm-password-error"></span>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="agree-terms" required>
+                            <span class="checkmark"></span>
+                            أوافق على <a href="terms.html" class="link">الشروط والأحكام</a> و <a href="privacy.html" class="link">سياسة الخصوصية</a>
+                        </label>
+                        <span class="form-error" id="terms-error"></span>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter">
+                            <span class="checkmark"></span>
+                            أرغب في تلقي العروض والتحديثات
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-auth">إنشاء حساب</button>
+                </form>
+
+                <div class="auth-divider">
+                    <span>أو</span>
+                </div>
+
+                <div class="social-auth">
+                    <button class="btn btn-social btn-google">
+                        <span class="social-icon">🔍</span>
+                        المتابعة بحساب Google
+                    </button>
+                    <button class="btn btn-social btn-facebook">
+                        <span class="social-icon">📘</span>
+                        المتابعة بحساب Facebook
+                    </button>
+                </div>
+
+                <div class="auth-footer">
+                    <p>لديك حساب بالفعل؟ <a href="login.html" class="auth-link">سجل دخولك هنا</a></p>
+                </div>
+            </div>
+
+            <div class="auth-welcome">
+                <div class="welcome-content">
+                    <h2>انضم إلى عائلتنا!</h2>
+                    <p>احصل على هذه المزايا الحصرية:</p>
+                    <ul class="features-list">
+                        <li>🎁 خصم ترحيبي 10% على أول طلب</li>
+                        <li>⭐ نقاط مكافآت على كل عملية شراء</li>
+                        <li>📦 شحن مجاني على الطلبات فوق 500 ريال</li>
+                        <li>🔔 إشعارات بالعروض الحصرية</li>
+                        <li>💼 تتبع الطلبات في الوقت الحقيقي</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript Files -->
+    <script src="../js/config.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

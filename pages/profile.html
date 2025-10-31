@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي - متجر الأثاث</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="../index.html" class="logo">🛋️ متجر الأثاث</a>
+            </div>
+            
+            <ul class="nav__menu">
+                <li><a href="../index.html" class="nav__link">الرئيسية</a></li>
+                <li><a href="products.html" class="nav__link">المنتجات</a></li>
+                <li><a href="categories.html" class="nav__link">التصنيفات</a></li>
+            </ul>
+
+            <div class="nav__actions">
+                <button class="nav__search-btn" id="search-btn">🔍</button>
+                <a href="cart.html" class="nav__cart-btn">🛒 <span class="cart-count">0</span></a>
+                <button class="nav__auth-btn" id="logout-btn">تسجيل الخروج</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-header">
+                <h1 class="profile-title">الملف الشخصي</h1>
+                <p class="profile-subtitle">إدارة معلومات حسابك وتفضيلاتك</p>
+            </div>
+
+            <div class="profile-layout">
+                <!-- Sidebar -->
+                <div class="profile-sidebar">
+                    <div class="sidebar-menu">
+                        <a href="#personal-info" class="sidebar-item active" data-tab="personal-info">
+                            <span class="sidebar-icon">👤</span>
+                            المعلومات الشخصية
+                        </a>
+                        <a href="#orders" class="sidebar-item" data-tab="orders">
+                            <span class="sidebar-icon">📦</span>
+                            طلباتي
+                            <span class="orders-count">0</span>
+                        </a>
+                        <a href="#addresses" class="sidebar-item" data-tab="addresses">
+                            <span class="sidebar-icon">🏠</span>
+                            العناوين
+                        </a>
+                        <a href="#wishlist" class="sidebar-item" data-tab="wishlist">
+                            <span class="sidebar-icon">❤️</span>
+                            المفضلة
+                            <span class="wishlist-count">0</span>
+                        </a>
+                        <a href="#settings" class="sidebar-item" data-tab="settings">
+                            <span class="sidebar-icon">⚙️</span>
+                            الإعدادات
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="profile-content">
+                    <!-- Personal Info Tab -->
+                    <div class="tab-content active" id="personal-info">
+                        <div class="tab-header">
+                            <h2>المعلومات الشخصية</h2>
+                            <p>إدارة معلومات حسابك الشخصية</p>
+                        </div>
+
+                        <form class="profile-form" id="personal-info-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="profile-first-name" class="form-label">الاسم الأول</label>
+                                    <input type="text" id="profile-first-name" name="first_name" class="form-input" value="أحمد" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="profile-last-name" class="form-label">اسم العائلة</label>
+                                    <input type="text" id="profile-last-name" name="last_name" class="form-input" value="محمد" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="profile-email" class="form-label">البريد الإلكتروني</label>
+                                <input type="email" id="profile-email" name="email" class="form-input" value="ahmed@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="profile-phone" class="form-label">رقم الهاتف</label>
+                                <input type="tel" id="profile-phone" name="phone" class="form-input" value="+966500000000" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">تاريخ الميلاد</label>
+                                <div class="birthday-fields">
+                                    <select class="form-select" id="birth-day">
+                                        <option value="">اليوم</option>
+                                        <!-- Days will be populated by JS -->
+                                    </select>
+                                    <select class="form-select" id="birth-month">
+                                        <option value="">الشهر</option>
+                                        <!-- Months will be populated by JS -->
+                                    </select>
+                                    <select class="form-select" id="birth-year">
+                                        <option value="">السنة</option>
+                                        <!-- Years will be populated by JS -->
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">حفظ التغييرات</button>
+                                <button type="button" class="btn btn-secondary" id="change-password-btn">تغيير كلمة المرور</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Orders Tab -->
+                    <div class="tab-content" id="orders">
+                        <div class="tab-header">
+                            <h2>طلباتي</h2>
+                            <p>عرض وتتبع طلباتك السابقة</p>
+                        </div>
+
+                        <div class="orders-list">
+                            <div class="empty-state">
+                                <div class="empty-icon">📦</div>
+                                <h3>لا توجد طلبات بعد</h3>
+                                <p>لم تقم بأي عمليات شراء حتى الآن</p>
+                                <a href="products.html" class="btn btn-primary">تسوق الآن</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Addresses Tab -->
+                    <div class="tab-content" id="addresses">
+                        <div class="tab-header">
+                            <h2>عناويني</h2>
+                            <p>إدارة عناوين الشحن الخاصة بك</p>
+                        </div>
+
+                        <div class="addresses-list">
+                            <div class="address-card">
+                                <div class="address-header">
+                                    <h4>المنزل</h4>
+                                    <span class="address-default">افتراضي</span>
+                                </div>
+                                <p class="address-text">الرياض، حي الملز، شارع الملك فهد</p>
+                                <p class="address-phone">+966500000000</p>
+                                <div class="address-actions">
+                                    <button class="btn-link edit-address">تعديل</button>
+                                    <button class="btn-link delete-address">حذف</button>
+                                </div>
+                            </div>
+
+                            <button class="add-address-btn">
+                                <span>+</span>
+                                إضافة عنوان جديد
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Wishlist Tab -->
+                    <div class="tab-content" id="wishlist">
+                        <div class="tab-header">
+                            <h2>قائمة المفضلة</h2>
+                            <p>المنتجات التي أضفتها إلى المفضلة</p>
+                        </div>
+
+                        <div class="wishlist-grid">
+                            <div class="empty-state">
+                                <div class="empty-icon">❤️</div>
+                                <h3>قائمة المفضلة فارغة</h3>
+                                <p>أضف بعض المنتجات إلى المفضلة لعرضها هنا</p>
+                                <a href="products.html" class="btn btn-primary">استعرض المنتجات</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Tab -->
+                    <div class="tab-content" id="settings">
+                        <div class="tab-header">
+                            <h2>الإعدادات</h2>
+                            <p>إدارة تفضيلات حسابك</p>
+                        </div>
+
+                        <div class="settings-list">
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>الإشعارات</h4>
+                                    <p>استلام إشعارات حول العروض والطلبات</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>النشرة البريدية</h4>
+                                    <p>استلام آخر العروض والتحديثات على البريد</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>الوضع الداكن</h4>
+                                    <p>تبديل الوضع الداكن للموقع</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="danger-zone">
+                            <h4>منطقة الخطر</h4>
+                            <p>هذه الإجراءات لا يمكن التراجع عنها</p>
+                            <button class="btn btn-danger" id="delete-account-btn">حذف الحساب</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript Files -->
+    <script src="../js/config.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>
